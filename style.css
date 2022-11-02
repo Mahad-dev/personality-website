@@ -9,6 +9,7 @@
 img {
   width: 100%;
 }
+
 /* -------Navbar-CSS-------- */
 .navbar ul li {
   font-size: 1.1rem;
@@ -27,29 +28,32 @@ img {
   align-content: center;
   padding: 2rem;
 }
-.flex-item-1{
+.flex-item{
   width: 45%;
 }
-.flex-item-2{
-  width: 45%;
+.flex-item h1{
+  font-family: 'Budokan Rounded', sans-serif;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 150%; 
 }
-.main-image-width{
-  width: 40%;
-  margin: auto;
-  }
-.flex-item-1 h1 span {
+.flex-item  h1 span{
   font-family: 'Budokan Rounded', sans-serif;
   font-weight: 700;
   font-size: 35px;
   line-height: 150%;
   color: #4edcd8;
 }
-.flex-item-1 h1 {
-  font-family: 'Budokan Rounded', sans-serif;
-  font-weight: 700;
-  font-size: 35px;
-  line-height: 150%;
+.flex-item .main-image-width{
+  display: flex;
+  width: 40%;
+  margin: auto;
 }
+/* .main-image-width{
+  width: 40%;
+  margin: auto;
+  } */
+
 .btn {
   background-color: #4edcd8;
   color: white;
@@ -82,9 +86,21 @@ img {
 
 /* ------Main-Last-section(Personality-Types)------*/
 
-.wrapper{
+.Personality-Types-Section{
+  display: flex;
+  width: 100%;
   padding: 2rem;
-  overflow-x: hidden;
+  overflow: hidden;
+}
+.Personality-Types-Section > div {
+  display: flex;
+  overflow: visible;
+  animation: scroll 8s linear infinite;
+  }
+@keyframes scroll {
+  100% { 
+    transform: translate(-50%); 
+  }
 }
 .personality-types{
   min-width: 10.3rem;
@@ -106,19 +122,11 @@ img {
   font-weight: 400;
 } 
 
-.wrapper ,.animation-type-1 ,.animation-type-2 {
+.animation-type-1 ,.animation-type-2 {
   display: flex;
   flex-direction: row;
 }
-.animation-type-1,.animation-type-2{
-  animation: scroll 12s linear infinite;
-}
 
-@keyframes scroll {
-  100% { 
-    transform: translateX(-100%); 
-  }
-}
 /*-------------Medium-Devices-Responsive---------- */
 
 @media  screen and  (max-width:991px) {
@@ -132,16 +140,19 @@ img {
     align-content: center;
     padding: 2rem;
   }
-  .flex-item-1 h1 span {
+  .flex-item h1 span {
     font-weight: 700;
     font-size: 1.7rem;
     line-height: 150%;
     color: #4edcd8;
   }
-  .flex-item-1 h1 {
+  .flex-item h1 {
     font-weight: 700;
     font-size: 1.7rem;
     line-height: 150%;
+  }
+  .flex-item  .main-image-width{
+    width: 60%;
   }
   .btn {
     background-color: #4edcd8;
@@ -178,21 +189,21 @@ img {
     align-content: center;
     padding: 2rem;
   }
-  .flex-item-1 h1 span {
+  .flex-item h1 span {
     font-weight: 700;
     font-size: 1.6rem;
     line-height: 150%;
     color: #4edcd8;
   }
-  .flex-item-1 h1 {
+  .flex-item h1 {
     font-size: 25px;
     line-height: 150% ;
   }
-  .flex-item-1{
+  .flex-item{
     width: auto;
     display: contents;
   }
-  .flex-item-2{
+  .flex-item img{
     width: 100%;
     margin-top: 1rem;
   }
@@ -207,7 +218,7 @@ img {
   .btn:hover {
     background-color: #4edcd7c0;
   }
-  .test-info-box {
+ .personality-test .flex-item .test-info-box {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -217,7 +228,7 @@ img {
     background-color: white;
     box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.1);
   }
-.wrapper {
+.Personality-Types-Section {
   width: auto;
   height: auto;
   padding: 1rem;
@@ -227,6 +238,12 @@ img {
   flex-direction: column;
   overflow: visible;
 }
+.Personality-Types-Section > div {
+  display: contents;
+  flex-direction: column;
+  overflow: visible;
+  animation-play-state: paused;
+  }
 .personality-types {
   width: 100%;
   height: 4.8rem;
