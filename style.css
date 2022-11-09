@@ -28,59 +28,54 @@ img {
   align-content: center;
   padding: 2rem;
 }
-.flex-item{
+.flex-box .flex-item{
   width: 45%;
 }
-.flex-item h1{
+.flex-box  .flex-item h1{
   font-family: 'Budokan Rounded', sans-serif;
   font-weight: 700;
   font-size: 35px;
   line-height: 150%; 
 }
-.flex-item  h1 span{
+.flex-box  .flex-item  h1 span{
   font-family: 'Budokan Rounded', sans-serif;
   font-weight: 700;
   font-size: 35px;
   line-height: 150%;
   color: #4edcd8;
 }
-.flex-item .main-image-width{
+.flex-box  .flex-item .main-image-width{
   display: flex;
-  width: 40%;
+  width: 50%;
   margin: auto;
 }
-/* .main-image-width{
-  width: 40%;
-  margin: auto;
-  } */
-
-.btn {
+.flex-box  .flex-item .btn {
   background-color: #4edcd8;
   color: white;
   padding: 0.5rem 1.5rem ;
   border-radius: 1.5rem ;
 }
-.btn:hover {
+.flex-box .flex-item .btn:hover {
   background-color: #068581a3;
   color: #fff;
 }
-.test-info-box {
+.flex-box .flex-item .test-info-box {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 313px;
-  height: 107px;
+  width: 19.5rem;
+  height: 6.7rem;
   border-radius: 20px;
   background-color: white;
   box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.1);
 }
-.test-info-box span {
+.flex-box .flex-item .test-info-box span {
   color: black;
 }
-.test-info-box h5 {
+.flex-box .flex-item .test-info-box h5 {
   color: #4edcd8;
 }
-.test-info-box {
+.flex-box .flex-item .test-info-box {
   cursor: pointer;
 }
 
@@ -95,12 +90,16 @@ img {
 .Personality-Types-Section > div {
   display: flex;
   overflow: visible;
-  animation: scroll 8s linear infinite;
+  cursor: pointer;
+  animation: scroll 11s linear infinite;
   }
 @keyframes scroll {
   100% { 
     transform: translate(-50%); 
   }
+}
+.Personality-Types-Section > div:hover {
+  animation-play-state: paused;
 }
 .personality-types{
   min-width: 10.3rem;
@@ -121,7 +120,6 @@ img {
 .personality-types span {
   font-weight: 400;
 } 
-
 .animation-type-1 ,.animation-type-2 {
   display: flex;
   flex-direction: row;
@@ -140,30 +138,30 @@ img {
     align-content: center;
     padding: 2rem;
   }
-  .flex-item h1 span {
+  .flex-box  .flex-item h1 span {
     font-weight: 700;
     font-size: 1.7rem;
     line-height: 150%;
     color: #4edcd8;
   }
-  .flex-item h1 {
+  .flex-box .flex-item h1 {
     font-weight: 700;
     font-size: 1.7rem;
     line-height: 150%;
   }
-  .flex-item  .main-image-width{
+  .flex-box .flex-item  .main-image-width{
     width: 60%;
   }
-  .btn {
+  .flex-box .flex-item .btn {
     background-color: #4edcd8;
     color: white;
     padding: 0.5rem 1.5rem;
     border-radius: 1.5rem;
   }
-  .btn:hover {
+  .flex-box .flex-item .btn:hover {
     background-color: #4edcd7c0;
   }
-  .test-info-box {
+  .flex-box .flex-item .test-info-box {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -180,35 +178,30 @@ img {
 @media  screen and  (max-width:767px) {
   
   .flex-box {
-    margin: auto;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
     justify-content: space-evenly;
     align-items: center;
-    align-content: center;
     padding: 2rem;
   }
-  .flex-item h1 span {
+  .flex-box .flex-item h1 span {
     font-weight: 700;
     font-size: 1.6rem;
     line-height: 150%;
     color: #4edcd8;
   }
-  .flex-item h1 {
-    font-size: 25px;
+  .flex-box .flex-item h1 {
+    font-size: 1.6rem;
     line-height: 150% ;
   }
-  .flex-item{
+  .flex-box .flex-item{
     width: auto;
     display: contents;
   }
-  .flex-item img{
+  .flex-box .flex-item img{
     width: 100%;
     margin-top: 1rem;
   }
-  
-  .btn {
+  .flex-box .flex-item .btn {
     background-color: #4edcd8;
     color: white;
     padding: 0.5rem 1.5rem;
@@ -217,6 +210,16 @@ img {
   }
   .btn:hover {
     background-color: #4edcd7c0;
+  }
+  .flex-box .flex-item .test-info-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 6.7rem;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.1);
   }
  .personality-test .flex-item .test-info-box {
     display: flex;
